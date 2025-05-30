@@ -14,11 +14,11 @@ const Navbar = () => {
     return(
       <nav className='nav sticky top-0 z-50 py-3 backdrop-blur-lg bg-secondary-background border-b border-navbar-border shadow-lg'>
         <div className='container px-4 mx-auto relative text-sm'>
-          <div className='flex justify-between items-center'>
+          <div className='flex justify-between items-center px-18'>
             <div className=''>
               <span className='text-xl tracking-tight'>Devnest Innova</span>
             </div>
-            <ul className='hidden lg:flex ml-14 space-x-12'>
+            <ul className='hidden lg:flex ml-14 space-x-6'>
               {navItems.map((item,index) => (
                 <li key={index}>
                   <a href={item.href} className='hover:text-nav-anchor-hover'>{item.label}</a>
