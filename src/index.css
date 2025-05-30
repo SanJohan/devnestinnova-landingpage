@@ -8,10 +8,28 @@
 
   color-scheme: light dark;
   /* color: rgba(255, 255, 255, 0.87); */
-  background-color: #100f1c;
-
+  background-color: var(--color-primary);
   /* font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
+}
+
+
+@theme {
+    --color-primary: #100f1c;
+    --color-primary-light: #ceecff;
+    --color-primary-dark: rgb(0, 22, 83);
+    --color-secondary-background: #6464DC;
+    --color-navbar-border: #6464DC33;
+
+
+    --color-html: #E44D26;
+    
+    /* Font */
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-display: 'Inter', system-ui, sans-serif;
+
+    /* Breakpoints */
+    --breakpoint-xs: 350px;
 }
