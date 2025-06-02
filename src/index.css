@@ -33,3 +33,12 @@
     /* Breakpoints */
     --breakpoint-xs: 350px;
 }
+
+
+.gradient-text {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+}
+
+.glassmorphism {
+  @apply backdrop-blur-lg bg-blue-background border-b border-navbar-border;
+}

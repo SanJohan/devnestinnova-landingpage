@@ -2,38 +2,58 @@
 
 const OurServices = () => {
   return (
-    <div className="mt-20  bg-bacgkround py-16 md:py-24">
+    <div className="py-16 md:py-24 bg-slate-900/50">
       <div className="container mx-auto px-4 md:px-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+            Nuestros <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Servicios</span>
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Sobre 
-              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"> Nosotros</span>
-            </h2>
-            <p className="text-muted-foreground mb-4 leading-relaxed">
-              En Devnest Innova, somos un equipo apasionado por la tecnología y la innovación, con sede en el corazón de Colombia. Nacimos con la misión de ayudar a empresas como la tuya a alcanzar su máximo potencial a través de soluciones digitales de vanguardia.
-            </p>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
-              Nuestros valores fundamentales son la excelencia, la transparencia y la colaboración. Creemos en construir relaciones a largo plazo con nuestros clientes, trabajando juntos para convertir sus visiones en realidades tecnológicas exitosas.
-            </p>
-            <div className="flex space-x-4">
-              <div className="flex items-center space-x-2 text-sm text-accent-foreground p-2 bg-primary/10 rounded-md">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            <div class="rounded-lg border bg-card text-card-foreground shadow-sm h-full glassmorphism hover:shadow-primary/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div class="flex flex-col space-y-1.5 p-6 items-center text-center">
+                <div class="p-3 rounded-full bg-primary/10 mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-primary"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path>
+                  </svg>
+                </div>
+                  <h3 class="font-semibold tracking-tight text-xl gradient-text">Aplicaciones Multiplataforma</h3>
+                </div>
+                <div class="p-6 pt-0">
+                  <p class="text-muted-foreground text-sm text-center">Desarrollamos apps nativas e híbridas para iOS y Android, optimizadas para un rendimiento excepcional y una experiencia de usuario intuitiva.</p>
+                </div>
+            </div>
+          </div>
+          <div>
+            <div class="rounded-lg border bg-card text-card-foreground shadow-sm h-full glassmorphism hover:shadow-primary/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div class="flex flex-col space-y-1.5 p-6 items-center text-center"><div class="p-3 rounded-full bg-primary/10 mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-primary"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline>
                 </svg>
-                <span>Innovación Constante</span>
               </div>
-              <div className="flex items-center space-x-2 text-sm text-accent-foreground p-2 bg-secondary/10 rounded-md">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-secondary"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
-                </svg>
-                <span>Calidad Garantizada</span>
+              <h3 class="font-semibold tracking-tight text-xl gradient-text">Software a la Medida</h3>
+            </div>
+            <div class="p-6 pt-0">
+              <p class="text-muted-foreground text-sm text-center">Creamos soluciones de software personalizadas que se adaptan perfectamente a las necesidades y procesos de tu empresa, impulsando la eficiencia.</p>
               </div>
             </div>
           </div>
-          <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl backdrop-blur-lg bg-blue-background border-b border-navbar-border p-2 hover:scale-105 transition-transform">
-            <img className="w-full h-full object-cover rounded-lg" src="https://images.unsplash.com/photo-1596496050860-b48b170fc584" 
-            alt="Equipo diverso de desarrolladores colombianos trabajando en computadoras en una oficina moderna y luminosa" />
+          <div>
+            <div class="rounded-lg border bg-card text-card-foreground shadow-sm h-full glassmorphism hover:shadow-primary/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div class="flex flex-col space-y-1.5 p-6 items-center text-center">
+                <div class="p-3 rounded-full bg-primary/10 mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-primary"><path d="M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8"></path><path d="M10 19v-3.96 3.15"></path><path d="M7 19h5"></path><rect width="6" height="10" x="16" y="12" rx="2"></rect>
+                  </svg>
+                </div>
+                <h3 class="font-semibold tracking-tight text-xl gradient-text">
+                  Desarrollo Web Moderno
+                </h3>
+              </div>
+              <div class="p-6 pt-0">
+                <p class="text-muted-foreground text-sm text-center">
+                  Diseñamos y desarrollamos sitios web y aplicaciones web atractivas, funcionales y responsive, utilizando las últimas tecnologías.
+                </p>
+              </div>
+            </div>
           </div>
-
+        
         </div> 
       </div>
     </div>
