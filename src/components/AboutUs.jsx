@@ -2,7 +2,7 @@
 
 const AboutUs = () => {
   return (
-    <div className="mt-20  bg-black/70 py-16 md:py-24">
+    <div className="mt-20  bg-bacgkround py-16 md:py-24">
       <div className="container mx-auto px-4 md:px-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -29,7 +29,7 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
-          <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl backdrop-blur-lg bg-background border-b border-navbar-border p-2 hover:scale-105 transition-transform">
+          <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl backdrop-blur-lg bg-blue-background border-b border-navbar-border p-2 hover:scale-105 transition-transform">
             <img className="w-full h-full object-cover rounded-lg" src="https://images.unsplash.com/photo-1596496050860-b48b170fc584" 
             alt="Equipo diverso de desarrolladores colombianos trabajando en computadoras en una oficina moderna y luminosa" />
           </div>
