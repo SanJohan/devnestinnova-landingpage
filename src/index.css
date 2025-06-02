@@ -8,7 +8,7 @@
 
   color-scheme: light dark;
   /* color: rgba(255, 255, 255, 0.87); */
-  background-color: var(--color-primary);
+  background-color: var(--color-original-background);
   /* font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -17,16 +17,12 @@
 
 
 @theme {
-    --color-primary: #100f1c;
-    --color-primary-light: #ceecff;
-    --color-primary-dark: rgb(0, 22, 83);
-    --color-secondary-background: #14142899;
+    --color-original-background: #100f1c;
+    --color-primary: #26C4F3;
+    --color-background: #14142899;
     --color-navbar-border: #6464DC33;
-    --color-nav-anchor-hover: #26C4F3;
     --color-secondary: #A64DFF;
 
-
-    --color-html: #E44D26;
     
     /* Font */
     --font-sans: 'Inter', system-ui, sans-serif;
