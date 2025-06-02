@@ -26,7 +26,7 @@ const Navbar = () => {
             <ul className='hidden lg:flex ml-14 space-x-6'>
               {navItems.map((item,index) => (
                 <li key={index}>
-                  <a href={item.href} className='hover:text-primary'>{item.label}</a>
+                  <a href={item.href} className='text-muted-foreground hover:text-primary'>{item.label}</a>
                 </li>
               ))}
             </ul>
