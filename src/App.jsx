@@ -5,6 +5,7 @@ import AboutUs from './components/AboutUs'
 import OurServices from './components/OurServices'
 import Methodology from './components/Methodology'
 import Testimonials from './components/Testimonials'
+import Contact  from './components/Contact'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
       <OurServices />
       <Methodology />
       <Testimonials />
+      <Contact />
     </>
   )
 }
