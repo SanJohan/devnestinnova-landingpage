@@ -2,7 +2,7 @@
 
 const AboutUs = () => {
   return (
-    <section id="aboutus" className="mt-20  bg-bacgkround py-16 md:py-24">
+    <section id="aboutus" className="pt-20  bg-bacgkround py-16 md:py-24">
       <div className="container mx-auto px-4 md:px-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
