@@ -2,7 +2,7 @@
 
 const OurServices = () => {
   return (
-    <div className="py-16 md:py-24 bg-slate-900/50">
+    <section id="ourservices" className="py-16 md:py-24 bg-slate-900/50">
       <div className="container mx-auto px-4 md:px-20">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
             Nuestros <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Servicios</span>
@@ -56,7 +56,7 @@ const OurServices = () => {
         
         </div> 
       </div>
-    </div>
+    </section>
   );
 };
 

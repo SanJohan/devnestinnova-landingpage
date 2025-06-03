@@ -1,7 +1,7 @@
 
 const Contact = () => {
   return (
-    <div className="py-16 md:py-24 bg-bacgkround ">
+    <section id="contact" className="py-16 md:py-24 bg-bacgkround ">
       <div className="container mx-auto px-4 md:px-20">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-2">Hablemos de <span className="gradient-text">Tu Proyecto</span></h2>
@@ -37,7 +37,7 @@ const Contact = () => {
         </div>
         
       </div>
-    </div>
+    </section>
   );
 };
 

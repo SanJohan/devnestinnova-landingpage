@@ -1,6 +1,11 @@
 const HeroSection = () => {
   return (
     <div className="flex flex-col items-center mt-6 lg:mt-20">
+
+      <div className="">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-20 w-20 md:h-28 md:w-28 text-primary stroke-[1.5]"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" x2="2" y1="8" y2="22"></line><line x1="17.5" x2="9" y1="15" y2="15"></line>
+        </svg>
+      </div>
       <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide 
         bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text font-bold">
         Devnest Innova
@@ -10,14 +15,14 @@ const HeroSection = () => {
       </p>
       <div className="flex flex-col gap-y-5 justify-center my-10 sm:flex-row">
         <a
-          href="#"
-          className="bg-gradient-to-r from-primary to-secondary py-3 px-4 mx-3 rounded-md hover:opacity-90 hover:scale-105
-            transition-transform duration-300"
+          href="#contact"
+          className="text-primary-foreground bg-gradient-to-r from-primary to-secondary py-3 px-4 mx-3 rounded-md hover:opacity-90 hover:scale-105
+            transition-transform duration-300 text-center"
         >
           Contactanos
         </a>
-        <a href="#" className="py-3 px-4 mx-3 rounded-md border text-primary hover:bg-primary/20 hover:opacity-90 hover:scale-105
-            transition-transform duration-300">
+        <a href="#ourservices" className="py-3 px-4 mx-3 rounded-md border text-primary bg-bacgkround hover:bg-primary/20 hover:opacity-90 hover:scale-105
+            transition-transform duration-300 text-center">
           Nuestros Servicios
         </a>
       </div>
