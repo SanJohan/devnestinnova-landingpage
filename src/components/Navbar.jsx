@@ -23,7 +23,7 @@ const Navbar = () => {
               </svg>
               <span className='text-2xl tracking-tight font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent'>Devnest Innova</span>
             </div>
-            <ul className='hidden lg:flex ml-14 space-x-6'>
+            <ul className='hidden lg:flex  space-x-6'>
               {navItems.map((item,index) => (
                 <li key={index}>
                   <a href={item.href} className='text-muted-foreground hover:text-primary'>{item.label}</a>
