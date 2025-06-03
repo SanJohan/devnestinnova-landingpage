@@ -6,6 +6,7 @@ import OurServices from './components/OurServices'
 import Methodology from './components/Methodology'
 import Testimonials from './components/Testimonials'
 import Contact  from './components/Contact'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
       <Methodology />
       <Testimonials />
       <Contact />
+      <Footer />
     </>
   )
 }
