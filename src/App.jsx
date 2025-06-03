@@ -13,9 +13,6 @@ function App() {
   return (
     <>
       <Navbar />
-      {/* <div className='max-w-7xl mx-auto pt-17 px-6 bg-gradient-to-br from-background via-slate-900 to-purple-900/30'>
-        <HeroSection />   
-      </div> */}
       <HeroSection />
       <AboutUs />
       <OurServices />
