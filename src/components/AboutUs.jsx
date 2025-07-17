@@ -29,7 +29,7 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
-          <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl backdrop-blur-lg bg-blue-background border-b border-navbar-border p-2 hover:scale-105 transition-transform">
+          <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl backdrop-blur-lg bg-blue-background border-b border-navbar-border p-2 hover:scale-105 transition-transform duration-500 ease-out">
             <img className="w-full h-full object-cover rounded-lg" src="https://images.unsplash.com/photo-1596496050860-b48b170fc584" 
             alt="Equipo diverso de desarrolladores colombianos trabajando en computadoras en una oficina moderna y luminosa" />
           </div>
