@@ -4,8 +4,6 @@ const Footer = () => {
     <div id="footer" className="py-12 bg-slate-950 border-t border-slate-800">
       <div className="container mx-auto px-4 md:px-20  text-center">
         <div className="flex justify-center items-center space-x-3 mb-6">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7 md:h-8 md:w-8 text-primary"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" x2="2" y1="8" y2="22"></line><line x1="17.5" x2="9" y1="15" y2="15"></line>
-          </svg>
           <span class="text-xl font-semibold font-heading gradient-text">Devnest Innova</span>
         </div>
         <p class="text-muted-foreground text-sm mb-6">Innovación y tecnología para un futuro digital brillante.</p>
