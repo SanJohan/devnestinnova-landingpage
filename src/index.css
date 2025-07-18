@@ -3,19 +3,14 @@
 
 :root {
   font-family: 'Poppins', system-ui, sans-serif;
-  /* line-height: 1.5;
-  font-weight: 400; */
-
   color-scheme: light dark;
-  /* color: rgba(255, 255, 255, 0.87); */
   background-color: var(--color-original-background);
-  /* font-synthesis: none;
+  font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
+  -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
 }
-
 
 @theme {
     --color-original-background: #100f1c;
