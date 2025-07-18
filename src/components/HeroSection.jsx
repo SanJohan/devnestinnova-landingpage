@@ -7,14 +7,14 @@ const HeroSection = () => {
         </svg> */}
       </div>
       <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide 
-        bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text font-bold">
+        bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text font-bold animate-fade-in-up animate-delay-200">
         Devnest Innova
       </h1>
-      <p className="mt-10 text-lg text-center text-muted-foreground max-w-4xl md:text-xl">
+      <p className="mt-10 text-lg text-center text-muted-foreground max-w-4xl md:text-xl animate-fade-in-up animate-delay-200">
         Transformamos ideas en soluciones tecnológicas innovadoras.
         Aplicaciones, software a medida y webs que impulsan tu negocio!
       </p>
-      <div className="flex flex-col gap-y-5 justify-center my-10 sm:flex-row">
+      <div className="flex flex-col gap-y-5 justify-center my-10 sm:flex-row animate-fade-in-up animate-delay-200">
         <a
           href="#contact"
           className="text-primary-foreground bg-gradient-to-r from-primary to-secondary py-3 px-4 mx-3 rounded-md hover:opacity-90 hover:scale-105

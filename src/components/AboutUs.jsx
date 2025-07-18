@@ -1,8 +1,11 @@
-//import { features } from "../constants";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 const AboutUs = () => {
+  const { ref, isVisible } = useScrollAnimation(0.2); 
+
   return (
-    <section id="aboutus" className="pt-20  bg-bacgkround py-16 md:py-24">
+    <section  ref={ref} id="aboutus" className={`pt-20 bg-bacgkround py-16 md:py-24  
+        ${isVisible ? "animate-fade-in-up animate-delay-200" : "opacity-0 translate-y-5"}`}>
       <div className="container mx-auto px-4 md:px-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
