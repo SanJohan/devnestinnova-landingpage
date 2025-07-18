@@ -2,7 +2,7 @@ const HeroSection = () => {
   return (
     <section className=" mx-auto px-6 min-h-[calc(100vh-3rem)] md:min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center pt-6 lg:pt-8 bg-gradient-to-br from-background via-slate-900 to-purple-900/30 ">
       <div className="mb-5">
-        <img width={180} height={180} src="./src/assets/devnestlogo.png" alt="" />
+        <img width={180} height={180} src="./src/assets/devnestlogo.png" alt="" className="animate-fade-in-up animate-delay-200"/>
         {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-20 w-20 md:h-28 md:w-28 text-primary stroke-[1.5]"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" x2="2" y1="8" y2="22"></line><line x1="17.5" x2="9" y1="15" y2="15"></line>
         </svg> */}
       </div>
