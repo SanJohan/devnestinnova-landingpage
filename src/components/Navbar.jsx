@@ -26,7 +26,7 @@ const Navbar = () => {
               ))}
             </ul>
             <div className='hidden lg:flex  justify-center items-center bg-primary/10 hover:bg-primary/20 transition-colors'>
-              <a href="#" className='py-2 px-3 border rounded-md text-primary'>Cotizar Proyecto</a>
+              <a href="#contact" className='py-2 px-3 border rounded-md text-primary'>Cotizar Proyecto</a>
             </div>
             <div className='lg:hidden md:flex flex-col justify-end'>
               <button onClick={toggleNavbar}>
