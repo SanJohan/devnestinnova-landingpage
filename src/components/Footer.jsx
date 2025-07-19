@@ -1,8 +1,10 @@
+import { useScrollAnimation} from '../hooks/useScrollAnimation';
 
 const Footer = () => {
+  const { ref, isVisible } = useScrollAnimation(0.2);
   return (
-    <div id="footer" className="py-12 bg-slate-950 border-t border-slate-800">
-      <div className="container mx-auto px-4 md:px-20  text-center">
+    <div ref={ref} id="footer" className="py-12 bg-slate-950 border-t border-slate-800">
+      <div className={`container mx-auto px-4 md:px-20  text-center ${isVisible ? 'animate-fade-in-up animate-delay-200' : ''}`}>
         <div className="flex justify-center items-center space-x-3 mb-6">
           <span class="text-xl font-semibold font-heading gradient-text">Devnest Innova</span>
         </div>
