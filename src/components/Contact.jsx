@@ -12,7 +12,7 @@ const Contact = () => {
             <p className="text-muted-foreground text-center mb-10">Completa el formulario o contáctanos por nuestras redes. ¡Estamos listos para ayudarte!</p>
           </div>
           
-          <form className="space-y-6 glassmorphism p-8 rounded-xl shadow-2xl">
+          <form className={`space-y-6 glassmorphism p-8 rounded-xl shadow-2xl ${isVisible ? 'animate-fade-in-up animate-delay-300' : ''}`}>
             <div>
               <label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-accent-foreground" for="name">
                 Nombre Completo
