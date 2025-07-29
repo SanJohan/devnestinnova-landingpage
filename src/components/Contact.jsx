@@ -12,10 +12,28 @@ const Contact = () => {
   });
 
   const [isSent, setIsSent] = useState(false);
-  const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const validateForm = () => {
+    if (!formData.name.trim()) return "Por favor, ingresa tu nombre.";
+    if (!formData.email.trim()) return "Por favor, ingresa tu correo.";
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) return "Ingresa un correo válido.";
+    if (!formData.message.trim()) return "Por favor, ingresa un mensaje.";
+    return null;
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSent(false);
+
+    const validationError = validateForm();
+    if (validationError) {
+      // setError(validationError);
+      return;
+    }
+    
+    setIsLoading(true);
 
     emailjs.send(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -34,7 +52,10 @@ const Contact = () => {
     })
     .catch((error) => {
       console.log('Error al enviar el mensaje', error);
-      setError("Hubo un error al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.");
+      
+    })
+    .finally(() => {
+      setIsLoading(false);
     });
   };
 
@@ -54,29 +75,54 @@ const Contact = () => {
               <label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-accent-foreground" for="name">
                 Nombre Completo
               </label>
-              <input type="text" className="flex h-10 w-full rounded-md border px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 mt-1 bg-slate-800/50 border-slate-700 focus:ring-primary" id="name" name="name" placeholder="Ej: Juan Pérez" required="" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })}></input>
+              <input type="text" className="flex h-10 w-full rounded-md border px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 mt-1 bg-slate-800/50 border-slate-700 focus:ring-primary" id="name" name="name" placeholder="Ej: Juan Pérez" required value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })}></input>
             </div>
 
             <div>
               <label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-accent-foreground" for="email">
                 Correo Electrónico
               </label>
-              <input type="email" className="flex h-10 w-full rounded-md border px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 mt-1 bg-slate-800/50 border-slate-700 focus:ring-primary" id="email" name="email" placeholder="Ej: juan.perez@empresa.com" required="" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })}></input>
+              <input type="email" className="flex h-10 w-full rounded-md border px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 mt-1 bg-slate-800/50 border-slate-700 focus:ring-primary" id="email" name="email" placeholder="Ej: juan.perez@empresa.com" required value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })}></input>
             </div>
 
             <div>
               <label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-accent-foreground" for="message">
                 Tu Mensaje
               </label>
-              <textarea className="flex min-h-[80px] w-full rounded-md border px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 mt-1 bg-slate-800/50 border-slate-700 focus:ring-primary" id="message" name="message" placeholder="Cuéntanos sobre tu idea o necesidad..." required="" rows="4" value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })}></textarea>
+              <textarea className="flex min-h-[80px] w-full rounded-md border px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 mt-1 bg-slate-800/50 border-slate-700 focus:ring-primary" id="message" name="message" placeholder="Cuéntanos sobre tu idea o necesidad..." required rows="4" value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })}></textarea>
             </div>
 
-            <button className="inline-flex items-center justify-center rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 h-10 px-4 w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-primary-foreground shadow-lg text-base py-3" type="submit">
-              Enviar Mensaje
+            <button disabled={isLoading} className="inline-flex items-center justify-center rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 h-10 px-4 w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-primary-foreground shadow-lg text-base py-3 cursor-pointer" type="submit">
+              {isLoading ? (
+                <span className="flex items-center gap-2">
+                  <svg
+                    className="animate-spin h-5 w-5 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    ></circle>
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                    ></path>
+                  </svg>
+                  Enviando...
+                </span>
+              ) : (
+                "Enviar Mensaje"
+              )}
             </button>
 
-            {isSent && <p className="text-green-500">Message sent!</p>}
-            {error && <p className="text-red-500">{error}</p>}
+            {isSent && <p className="text-green-500 animate-blurred-fade-in">Mensaje enviado!</p>}
           </form>
 
 
