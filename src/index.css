@@ -43,3 +43,13 @@
 .glassmorphism {
   @apply backdrop-blur-lg bg-blue-background border-b border-navbar-border;
 }
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: spin 1s ease-in-out infinite;
+}

@@ -1,6 +1,7 @@
 import { useScrollAnimation} from "../hooks/useScrollAnimation";
 import { useState } from "react";
 import emailjs from '@emailjs/browser';
+import '../../src/index.css'; // Ensure styles are imported
  
 const Contact = () => {
   const { ref, isVisible } = useScrollAnimation(0.2);
@@ -94,9 +95,9 @@ const Contact = () => {
 
             <button disabled={isLoading} className="inline-flex items-center justify-center rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 h-10 px-4 w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-primary-foreground shadow-lg text-base py-3 cursor-pointer" type="submit">
               {isLoading ? (
-                <span className="flex items-center gap-2">
+                <div className="flex justify-center">
                   <svg
-                    className="animate-spin h-5 w-5 text-white"
+                    className="h-6 w-6 text-gray-300 spinner"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -108,15 +109,14 @@ const Contact = () => {
                       r="10"
                       stroke="currentColor"
                       strokeWidth="4"
-                    ></circle>
+                    />
                     <path
                       className="opacity-75"
                       fill="currentColor"
                       d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-                    ></path>
+                    />
                   </svg>
-                  Enviando...
-                </span>
+                </div>
               ) : (
                 "Enviar Mensaje"
               )}
